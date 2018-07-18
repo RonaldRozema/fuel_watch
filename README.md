@@ -12,7 +12,7 @@ De nieuwe omgeving zal nu geinstalleerd worden.
 
 ## Starten virtuele omgeving
 - Open de command line
-- Ga naar de ~\\<virtualenv>\\Scripts folder
+- Ga naar de ~\<virtualenv>\Scripts folder
 - type in "activate" om de omgeving op te starten
 
 ## Installeren benodigde packages
