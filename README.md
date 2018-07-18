@@ -9,7 +9,7 @@
 
 ## Aanmaken virtual environment
 - Open de command line en ga naar de directory waar je de virtualenv geinstalleerd wilt hebben.
-- Run het commando om een nieuwe virtualenv aan te maken: "virtualenv <naam omgeving>". 
+- Run het commando om een nieuwe virtualenv aan te maken: "virtualenv <i>naam omgeving</i>". 
 
 De nieuwe omgeving zal nu geinstalleerd worden.
 
