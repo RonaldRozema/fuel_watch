@@ -1,5 +1,8 @@
 # Fuel watch
 
+## Library documentation
+- Flask: http://flask.pocoo.org/docs/1.0/
+
 ## Requirements
 - python 3.x is geinstalleerd op je machine
 - pip install virtualenv
