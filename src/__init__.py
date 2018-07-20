@@ -19,6 +19,10 @@ def create_app(test_config=None):
         # Load the test config if passed in
         app.config.from_mapping(test_config)
 
+    from src.bike import bike_api
+
+    app.register_blueprint(bike_api)
+
     # Ensure the instance folder exists
     try:
         os.makedirs(app.instance_path)
