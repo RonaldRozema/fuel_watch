@@ -26,6 +26,6 @@ De nieuwe omgeving zal nu geinstalleerd worden.
 ## Running local server
 - Open de command line
 - Ga naar de src folder in het project
-- Geef het commando: set FLASK_APP=src
+- Geef het commando: set FLASK_APP=app.py
 - Geeft het command0: flask run
 - Ga in de browser naar http://localhost:5000
