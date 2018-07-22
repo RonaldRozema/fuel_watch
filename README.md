@@ -29,3 +29,10 @@ De nieuwe omgeving zal nu geinstalleerd worden.
 - Geef het commando: set FLASK_APP=app.py
 - Geeft het command0: flask run
 - Ga in de browser naar http://localhost:5000
+
+## Database aanmaken
+- Open de command line
+- Start de virtual environment
+- ga naar de root folder van het project
+- run het commando: flask db init
+- om de migraties uit te voeren, run het command: flask db migrate 
