@@ -24,12 +24,12 @@ def create_app(test_config=None):
         # Load the test config if passed in
         app.config.from_mapping(test_config)
 
+    # initialize db for app
     db.init_app(app)
-
     from api.models import bikeModel
-
     migrate = Migrate(app, db)
 
+    # register blueprints
     app.register_blueprint(bike_api)
 
     # Ensure the instance folder exists
