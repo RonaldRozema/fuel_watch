@@ -1,6 +1,4 @@
-from api.models import DB
-
-db = DB
+from api.models import db
 
 class Bike(db.Model):
 

@@ -4,7 +4,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
-from api import models
+from api.models import db
 from api.config import Config
 from api.bike import bike_api
 
@@ -24,11 +24,11 @@ def create_app(test_config=None):
         # Load the test config if passed in
         app.config.from_mapping(test_config)
 
-    db = SQLAlchemy(app)
-    migrate = Migrate(app, db)
+    db.init_app(app)
 
-    import api.models
-    api.models.DB = db
+    from api.models import bikeModel
+
+    migrate = Migrate(app, db)
 
     app.register_blueprint(bike_api)
 
