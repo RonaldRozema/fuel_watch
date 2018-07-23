@@ -26,7 +26,7 @@ def create_app(test_config=None):
 
     # initialize db for app
     db.init_app(app)
-    from api.models import bikeModel
+    from api.models import bike
     migrate = Migrate(app, db)
 
     # register blueprints
