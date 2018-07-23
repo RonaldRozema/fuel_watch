@@ -1,7 +1,12 @@
 import os
 
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 
+from api.models import db
+from api.config import Config
+from api.bike import bike_api
 
 def create_app(test_config=None):
 
@@ -14,12 +19,16 @@ def create_app(test_config=None):
 
     if test_config is None:
         # Load the instance config, if it exists, when not testing
-        app.config.from_pyfile('config.py', silent=True)
+        app.config.from_object(Config)
     else:
         # Load the test config if passed in
         app.config.from_mapping(test_config)
 
-    from src.bike import bike_api
+    db.init_app(app)
+
+    from api.models import bikeModel
+
+    migrate = Migrate(app, db)
 
     app.register_blueprint(bike_api)
 
@@ -30,7 +39,7 @@ def create_app(test_config=None):
         pass
 
     # a simple page that says hello
-    @app.route('/hello')
+    @app.route('/')
     def hello():
         return 'Hello World!'
     
